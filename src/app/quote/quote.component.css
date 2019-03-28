@@ -1,5 +1,9 @@
 #quote-box {
-  padding: 30px;
+  background-color: azure;
+  padding: 40px;
+  padding-bottom: 60px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 250%;
   margin: 0;
   position: absolute;
   top: 50%;
