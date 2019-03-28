@@ -10,12 +10,7 @@ import { QuoteModel } from '../quoteModel';
 })
 export class QuoteComponent implements OnInit {
 
-    // private quote = [];
-    // private quoteObservable: Observable<any[]>
-
     quoteObj: QuoteModel[] = [];
-    // author: string;
-    // content: string;
 
     constructor(private quoteData: QuoteDataService) { }
 
@@ -30,41 +25,5 @@ export class QuoteComponent implements OnInit {
                 this.quoteObj = res;
             });
     }
-
-    newQuote() {
-
-    }
-
-    // getQuote() {
-    //     this.quoteData.getQuote().subscribe((res: any[]) => {
-    //         console.log(res);
-    //         this.quote = res;
-    //     });
-    //     // this.convertToString();
-    // }
-
-    // getQuoteObj2() {
-    //     this.quoteData.getQuote().subscribe((res: QuoteModel[]) => {
-    //         console.log(res);
-    //         this.quoteObj = res;
-    //     });
-    // }
-
-    // convertToString() {
-    //     this.getQuoteObj();
-    //     let source = this.quoteObj[0];
-    //     console.log('source:', source);
-    //     this.author = source.title;
-    //     this.content = source.content;
-    // }
-
-    // convertToStringFromObj() {
-    //     let source: QuoteModel = this.quoteObj[0];
-    //     console.log('source: ', source);
-    // }
-
-    // qetQuoteObs() {
-    //     this.quoteObservable = this.quoteData.getQuote();
-    // }
 
 }

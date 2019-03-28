@@ -15,8 +15,4 @@ export class QuoteDataService {
     getQuoteObj(): Observable<QuoteModel[]> {
         return this.http.get<QuoteModel[]>(this.url)
     }
-
-    // getQuote(){
-    //     return this.http.get(this.url);
-    // }
 }
