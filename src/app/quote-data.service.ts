@@ -8,11 +8,11 @@ import { QuoteModel } from './quoteModel';
 })
 export class QuoteDataService {
 
-    url: string = 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1' + " " + new Date().getTime();
+    url: string = 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1';
 
     constructor(private http: HttpClient) { }
 
     getQuoteObj(): Observable<QuoteModel[]> {
-        return this.http.get<QuoteModel[]>(this.url)
+        return this.http.get<QuoteModel[]>(this.url + " " + new Date().getTime());
     }
 }

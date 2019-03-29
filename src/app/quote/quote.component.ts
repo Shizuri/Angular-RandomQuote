@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { QuoteDataService } from '../quote-data.service';
-import { Observable } from 'rxjs';
 import { QuoteModel } from '../quoteModel';
 
 @Component({

@@ -1,13 +1,64 @@
 #quote-box {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 100px 30px 30px;
   background-color: azure;
-  padding: 40px;
-  padding-bottom: 60px;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 250%;
+  padding: 20px;
   margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+#text {
+  grid-column: 1/4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 100%;
+  justify-self: center;
+  align-self: center;
+  animation-name: fade-text;
+  animation-duration: 3s;
+}
+
+#author {
+  grid-column: 1/4;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 100%;
+  justify-self: center;
+  align-self: center;
+  animation-name: fade-author;
+  animation-duration: 3s;
+}
+
+#tweet-quote {
+  grid-column: 1/1;
+  justify-self: center;
+  align-self: center;
+}
+
+#new-quote {
+  background-color: #00acee;
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 100%;
+  grid-column: 3/4;
+  justify-self: center;
+  align-self: center;
+}
+
+@keyframes fade-text {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fade-author {
+  0% {opacity: 0;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
 }
